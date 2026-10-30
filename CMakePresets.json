@@ -1,0 +1,48 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": { "major": 3, "minor": 21, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "vs",
+      "displayName": "Visual Studio 2022 (기본 빌드)",
+      "description": "실제 빌드용. 기존 build/ 디렉토리를 그대로 사용한다.",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build"
+    },
+    {
+      "name": "compiledb",
+      "displayName": "Ninja — compile_commands.json 생성 전용",
+      "description": "clangd/clang-tidy 가 쓸 컴파일 DB 를 만든다. Developer PowerShell 에서 실행할 것(vcvars 필요).",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-clangd",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "release",
+      "displayName": "Release 빌드",
+      "configurePreset": "vs",
+      "configuration": "Release"
+    },
+    {
+      "name": "debug",
+      "displayName": "Debug 빌드",
+      "configurePreset": "vs",
+      "configuration": "Debug"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "release",
+      "displayName": "테스트 (Release)",
+      "configurePreset": "vs",
+      "configuration": "Release",
+      "output": { "outputOnFailure": true }
+    }
+  ]
+}

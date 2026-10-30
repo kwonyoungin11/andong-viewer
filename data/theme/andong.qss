@@ -1,0 +1,139 @@
+/* Andong-si official VI — BS 1-01 전용색상
+   AD Blue PANTONE 661 C  RGB 0 60 120  #003C78
+   AD Red  PANTONE 7425 C RGB 180 20 70 #B41446
+   https://www.andong.go.kr/portal/contents.do?mId=0301030600
+   UI type +2pt from the previous sheet.
+*/
+QMainWindow, QWidget#andongRoot {
+  background: #F4F6F8;
+  color: #1A1A1A;
+  font-family: "Malgun Gothic";
+  font-size: 15px;
+}
+QWidget#andongTop {
+  background: #003C78;
+  color: #FFFFFF;
+  min-height: 64px;
+}
+QWidget#andongBrand {
+  background: transparent;
+}
+QLabel#andongMark {
+  min-width: 48px;
+  max-width: 48px;
+  min-height: 48px;
+  max-height: 48px;
+  padding: 4px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+QLabel#andongCity {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 4px 0 0;
+}
+QWidget#andongSatOpacityRow {
+  background: transparent;
+}
+QLabel#andongSatOpacityLabel,
+QLabel#andongSatOpacityValue {
+  color: #4B5563;
+  font-size: 14px;
+  font-weight: 400;
+}
+QSlider#andongSatOpacity {
+  min-height: 22px;
+  max-height: 22px;
+}
+QSlider#andongSatOpacity::groove:horizontal {
+  background: #D5DCE6;
+  height: 6px;
+  border-radius: 3px;
+}
+QSlider#andongSatOpacity::sub-page:horizontal {
+  background: #003C78;
+  border-radius: 3px;
+}
+QSlider#andongSatOpacity::handle:horizontal {
+  background: #B41446;
+  border: 1px solid #003C78;
+  width: 14px;
+  margin: -5px 0;
+  border-radius: 7px;
+}
+QLabel#andongTitle {
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 700;
+}
+QLabel#andongSub {
+  color: #D6E2F0;
+  font-size: 14px;
+}
+QLabel#andongLegendHint {
+  color: #4B5563;
+  font-size: 14px;
+}
+QLineEdit#andongSearch {
+  min-height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #003C78;
+  border-radius: 6px;
+  background: #FFFFFF;
+  font-size: 16px;
+}
+QPushButton {
+  min-height: 34px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: #B41446;
+  color: #FFFFFF;
+  font-weight: 700;
+  border: none;
+  font-size: 15px;
+}
+QPushButton:hover { background: #C91D56; }
+QGroupBox {
+  font-weight: 700;
+  font-size: 15px;
+  border: 1px solid #C5CED8;
+  border-radius: 8px;
+  margin-top: 12px;
+  padding: 12px 8px 8px 8px;
+  background: #FFFFFF;
+}
+QGroupBox::title {
+  subcontrol-origin: margin;
+  left: 10px;
+  padding: 0 6px;
+  color: #003C78;
+}
+QCheckBox {
+  font-size: 15px;
+  min-height: 28px;
+  spacing: 8px;
+}
+QCheckBox::indicator {
+  width: 20px;
+  height: 20px;
+}
+QLabel#andongDetail {
+  color: #003C78;
+  padding: 8px 12px;
+  background: #FFFFFF;
+  border-top: 1px solid #C5CED8;
+  font-size: 15px;
+  font-weight: 700;
+  min-height: 28px;
+}
+QLabel#andongStatus {
+  color: #4B5563;
+  padding: 6px 10px;
+  background: #E8EEF4;
+  font-size: 15px;
+}
+QgsMapCanvas#mapCanvas {
+  background: #FFFFFF;
+  border: 1px solid #C5CED8;
+}

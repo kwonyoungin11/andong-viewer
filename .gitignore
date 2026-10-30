@@ -1,0 +1,23 @@
+# 빌드 산출물
+build/
+build-*/
+out/
+CMakeUserPresets.json
+
+# 배포본 — publish-andong.ps1 로 다시 만든다(대부분 복사된 QGIS 런타임)
+dist/
+
+# 큰 자료 — pack-andong-basemap 으로 다시 만든다
+data/andong/*.mbtiles
+data/andong/*.mbtiles.aux.xml
+data/andong/*.tif
+data/andong/*.tiff
+data/andong/_src_logo_a.ai
+data/andong/mark-src/
+
+# 임시
+*.user
+*.aux.xml
+__pycache__/
+*.pyc
+logs/
